@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 3 - Dynamic Content</title>
+    <title>Exercise 4 - Form Handling</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
@@ -17,10 +17,14 @@
         </nav>
     </header>
     <main>
-        <h2>Welcome to my web page with dynamic content!</h2>
-        <p>This is the main content area with some text.</p>
-        <p>Here's a random quote for you:</p>
-        <blockquote>{{ quote }}</blockquote>
+        <h2>Form Handling Exercise</h2>
+        <form method="POST" action="/form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
     </main>
     <footer>
         <p>Contact Information:</p>
